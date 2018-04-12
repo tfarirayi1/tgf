@@ -1,0 +1,70 @@
+#Shell{
+    background-color: rgba(255,138,101 ,1);
+    cursor: pointer;
+    height: 100%;
+    position: fixed;
+    user-select: none;
+    width: 100%;
+    z-index: 1;
+}
+#Shell
+.map{
+    position: absolute;
+    z-index: 2;
+    width: 81%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding: 0.7ch;
+    opacity: 0.2;
+    font-size: 3.2ch;
+    font-family: 'Chivo';
+}
+#Shell 
+.view{
+    background-color: rgba(38,50,56 ,0.9);
+    color: white;
+    height: 100%;
+    left: 2ch;
+    overflow: hidden;
+    padding: 0ch;
+    position: absolute;
+    text-overflow: clip;
+    top: 0;
+    transition: left 0s linear;
+    white-space: nowrap;
+    width: calc(100% - 2ch);
+    z-index: 3;
+}
+#Shell[data-state-menu='state2']
+.view{
+    left:81%;
+}
+#Shell
+.map-toggle-button{
+    width:fit-content;
+    padding:0.7ch;
+    cursor:pointer;
+    display:inline-block;
+    vertical-align:middle;
+    user-select:none;
+    text-align:center;
+}
+#Shell
+.map-toggle-button::before {
+    margin:0;
+    /* content:'\205D\25c9'; */
+    /* content:'\27a4'; */
+    content:'\27a0';
+    content:'\276f';
+    color:rgba(255,138,101 ,1);
+    font-size:2ch;
+    width:fit-content;
+    line-height:100%;
+    white-space:pre;
+    text-align:center;
+}
+#Shell[data-state-menu='state2']
+.map-toggle-button::before{
+    content:'\276e';
+}
