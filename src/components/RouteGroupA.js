@@ -21,14 +21,14 @@ class RouteGroupA extends React.Component{
         //configure routing
         $routes=[
             {
-                location:'/x',
+                address:'/x',
                 transcend:false, 
                 resource:ViewComponentA,
                 public:false,
                 cog:'0.x',
             },
             {
-                location:'/x/x',
+                address:'/x/x',
                 transcend:false,
                 resource:ViewComponentC,
                 public:true,
@@ -47,13 +47,13 @@ class RouteGroupA extends React.Component{
     }
     render(){
         let authorised=$routes.map((route,index)=>{
-            return <Route key={index} exact={!route.transcend} path={route.location} component={route.resource}/>
+            return <Route key={index} exact={!route.transcend} path={route.address} component={route.resource}/>
         })
         let unauthorised=$routes.map((route,index)=>{
             if(route.public){
-                return <Route key={index} exact={!route.transcend} path={route.location} component={route.resource}/>
+                return <Route key={index} exact={!route.transcend} path={route.address} component={route.resource}/>
             }
-            return <Route key={index} exact={true} path={route.location} component={AccessDenied}/>
+            return <Route key={index} exact={true} path={route.address} component={AccessDenied}/>
         })
         const RouteGroupA=this.state.status==='authorised'?authorised:unauthorised
         return <div id="RouteGroupA">{RouteGroupA}</div>

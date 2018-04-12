@@ -43,13 +43,13 @@ class Shell extends React.Component{
         //configure routes
         $routes=[
             {
-                location:'/',
+                address:'/', //index
                 transcend:false,
                 resource:ViewComponentB,
                 cog:'0.x',
             },
             {
-                location:'/x',
+                address:'/x',
                 transcend:true,
                 resource:RouteGroupA,
                 cog:'0.x',
@@ -65,10 +65,10 @@ class Shell extends React.Component{
         this.setupUserAuthentication()
     }
     render(){
-        const map=<div className="map">{$routes.map((route,index)=><Link key={index} to={route.location}>{route.location}<br/></Link>)}</div>
+        const map=<div className="map">{$routes.map((route,index)=><Link key={index} to={route.address}>{route.address}<br/></Link>)}</div>
         const mapToggleButton=<div className="map-toggle-button" onClick={e=>this.cyclePropertyState('menu',['default','state2'])}></div>
         const routes=$routes.map((route,index)=>{
-            return <Route key={index} exact={!route.transcend} path={route.location} component={route.resource}/>
+            return <Route key={index} exact={!route.transcend} path={route.address} component={route.resource}/>
         })
         const view=<div className="view">{mapToggleButton}{routes}</div>
         const Shell=<React.Fragment>{map}{view}</React.Fragment>
