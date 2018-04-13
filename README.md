@@ -17,10 +17,10 @@
 * provides a way of signing in from any location 
 ##### packages
 **react**  
-  * *component based javascript framework*
+  *component based javascript framework*
   
 **react-router-dom**  
-  * *routing library*
+  *routing library*
   
 **aws-amplify**  
-  * *amazon cognito identity authentication library*
+  *amazon cognito identity authentication library*
