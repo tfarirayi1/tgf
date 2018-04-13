@@ -9,9 +9,8 @@ import React from 'react'
 import { Link, Route } from 'react-router-dom'
 import { Auth } from 'aws-amplify'
 //code
-var $locations
-var $location=window.history
-var $context='Shell'
+let $routes
+const $context='Shell'
 class Shell extends React.Component{
     cyclePropertyState(property,states){
         //update current state
@@ -42,7 +41,7 @@ class Shell extends React.Component{
     constructor(props){
         super(props)
         //configure routes
-        $locations=[
+        $routes=[
             {
                 endpoint:'/', //index
                 transcend:false,
@@ -54,8 +53,9 @@ class Shell extends React.Component{
                 resource:RouteGroupA,
             },
         ]
-        //build state
-        const buildProperty=(propertyName,defaultValue)=>{return ($location.state?($location.state[$context]?$location.state[$context][propertyName]||defaultValue:defaultValue):defaultValue)}
+        //build working memory
+        const $location=window.history
+        const buildProperty=(propertyName,defaultWorkingValue)=>{return ($location.state?($location.state[$context]?$location.state[$context][propertyName]||defaultWorkingValue:defaultWorkingValue):defaultWorkingValue)}
         this.state={
             id:$context,
             menu:buildProperty('menu','default'),
@@ -64,10 +64,10 @@ class Shell extends React.Component{
         this.setupUserAuthentication()
     }
     render(){
-        const links=$locations.map((route,index)=><Link key={index} to={route.endpoint}>{route.endpoint}<br/></Link>)
+        const links=$routes.map((route,index)=><Link key={index} to={route.endpoint}>{route.endpoint}<br/></Link>)
         const map=<div className="map">{links}</div>
         const mapToggleButton=<div className="map-toggle-button" onClick={e=>this.cyclePropertyState('menu',['default','state2'])}></div>
-        const routes=$locations.map((route,index)=><Route key={index} exact={!route.transcend} path={route.endpoint} component={route.resource}/>)
+        const routes=$routes.map((route,index)=><Route key={index} exact={!route.transcend} path={route.endpoint} component={route.resource}/>)
         const view=<div className="view">{mapToggleButton}{routes}</div>
         const Shell=<React.Fragment>{map}{view}</React.Fragment>
         return <div id="Shell" data-state-menu={this.state.menu}>{Shell}</div>
