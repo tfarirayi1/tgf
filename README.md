@@ -2,7 +2,13 @@
 #### [react](https://reactjs.org 'react homepage') web application boilerplate  
 ### _philosophy  
 #### a web application consists of resources  
-#### resources are found at a location using their address/endpoint
+  * resources are found at a location using their address/endpoint
+#### a react component has properties
+  * a property determines what is rendered by a component.
+#### a react component has *working memory*, which holds for each property a *working value*
+  * all properties must be loaded to working memory using the default working value or a saved working values (*window.history*).  
+  * working memory can be modified to change the working value of a property.
+  * the working value of a property can be modified.
 ### _packages
 #### react  
   * component based javascript framework.
