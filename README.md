@@ -1,26 +1,26 @@
 ### project----project-zero-main
-#### [react](https://reactjs.org 'react homepage') web application boilerplate  
+#### &nbsp;[react](https://reactjs.org 'react homepage') web application boilerplate  
 ### philosophy  
-####  a web application consists of resources  
-####  resources are found at a location using their address/endpoint
+#### &nbsp;a web application consists of resources  
+#### &nbsp;resources are found at a location using their address/endpoint
 ### packages
-#### react  
+#### &nbsp;react  
   * component based javascript framework.
-#### react-router-dom  
+#### &nbsp;react-router-dom  
   * routing library for react.
-#### aws-amplify  
+#### &nbsp;aws-amplify  
   * cognito identity authentication library.  
 ### components   
-#### Shell.js   
+#### &nbsp;Shell.js   
 * provides user authentication.
 * provides a way of accessing the resources at the current location.
 * provides a way of getting to one location from any location.
 * provides a way of signing in from any location.
-#### RouteGroupA.js   
+#### &nbsp;RouteGroupA.js   
 * provides a way of protecting multiple locations in one place.
-#### ViewComponentA.js  
+#### &nbsp;ViewComponentA.js  
 * a resource provided at a location.
-#### ViewComponentB.js  
+#### &nbsp;ViewComponentB.js  
 * a resource provided at a location.
-#### ViewComponentC.js
+#### &nbsp;ViewComponentC.js
 * a resource provided at a location.
