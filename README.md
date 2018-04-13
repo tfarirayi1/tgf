@@ -10,13 +10,13 @@
 #### ViewComponentB.js  
 #### ViewComponentC.js
 ### packages
-+ react  
+#### react  
   * component based javascript framework.
   
-+ react-router-dom  
+#### react-router-dom  
   * routing library for react.
   
-+ aws-amplify  
+#### aws-amplify  
   * cognito identity authentication library.  
 ### Shell.js
 #### description
