@@ -8,14 +8,14 @@
 * ViewComponentC.js
 
 ### Shell.js
-##### philosophy
+#### philosophy
 > *a web application consists of resources.  resources are found at a location using their address/endpoint*
-##### description
+#### description
 * provides user authentication
 * provides a way of displaying the resources at current location
 * provides a way of displaying all available locations from any location
 * provides a way of signing in from any location 
-##### packages
+#### packages
 **react**  
   * component based javascript framework.
   
