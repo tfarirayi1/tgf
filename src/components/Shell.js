@@ -1,6 +1,6 @@
 //components
 import ViewComponentB from './ViewComponentB'
-import RouteGroupA from './RouteGroupA'
+import GateA from './GateA'
 //styles
 import './styles/Index.css'
 import './styles/Shell.css'
@@ -50,7 +50,7 @@ class Shell extends React.Component{
             {
                 endpoint:'/x',
                 transcend:true,
-                resource:RouteGroupA,
+                resource:GateA,
             },
         ]
         //build working memory

@@ -1,5 +1,6 @@
 //packages
 import React from 'react'
+import { Route } from 'react-router-dom'
 //code
 let $routes
 const $context='ViewComponentA'
@@ -26,6 +27,7 @@ class ViewComponentA extends React.Component{
     }
     render(){
         const wm=this.state //working memory
+        const routes=$routes.map((route,index)=><Route key={index} exact={route.transcend} path={route.endpoint}/>) //eslint-disable-line
         const ViewComponentA=<React.Fragment>{wm.id}</React.Fragment>
         return <div id="ViewComponentA">{ViewComponentA}</div>
     }

@@ -8,8 +8,8 @@ import ViewComponentC from './ViewComponentC'
 import AccessDenied from './AccessDenied'
 //code
 let $routes
-const $context='RouteGroupA'
-class RouteGroupA extends React.Component{
+const $context='GateA'
+class GateA extends React.Component{
     checkIdentity(){
         //verify session
         Auth.currentSession()
@@ -35,7 +35,7 @@ class RouteGroupA extends React.Component{
         ]
         //build memory
         const $location=props.history
-        const buildPublicProperty=(propertyName,defaultWorkingValue)=>{return ($location.state?($location.state[$context]?$location.state[$context][propertyName]||defaultWorkingValue:defaultWorkingValue):defaultWorkingValue)}
+        const buildPublicProperty=(propertyName,defaultWorkingValue)=>{return ($location.state?($location.state[$context]?$location.state[$context][propertyName]||defaultWorkingValue:defaultWorkingValue):defaultWorkingValue)} //eslint-disable-line
         this.state={
             id:$context,
             status:'authorised',
@@ -53,4 +53,4 @@ class RouteGroupA extends React.Component{
         return <div id="RouteGroupA">{RouteGroupA}</div>
     }
 }
-export default RouteGroupA
+export default GateA

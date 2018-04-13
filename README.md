@@ -6,13 +6,13 @@
 #### a react component has properties
   * a property determines what is rendered by a component.  
 #### a react component has working memory, which holds for each property a 'working value'
-  * all properties must be loaded into working memory with its default working value or a saved one.  
+  * all properties must be loaded into working memory with their default working values or saved ones.  
   * manipulate the component by modifying the working values of its properties.
 ### _packages
 #### react  
   * component based javascript framework.
 #### react-router-dom  
-  * routing library for react.
+  * declarative routing library for react.
 #### aws-amplify  
   * cognito identity authentication library.  
 ### _components   
@@ -20,7 +20,7 @@
 * provides a way of accessing the resources at the current location.
 * provides a way of getting to a location from any location.
 * provides a way of signing in and out, from any location.
-#### RouteGroupA.js   
+#### GateA.js   
 * provides a way of protecting multiple locations at once.
 #### ViewComponentA.js  
 * a resource provided at a location.
