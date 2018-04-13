@@ -12,10 +12,9 @@
   * cognito identity authentication library.  
 ### _components   
 #### Shell.js   
-* provides user authentication.
 * provides a way of accessing the resources at the current location.
 * provides a way of getting to a location from any location.
-* provides a way of signing in from any location.
+* provides a way of signing in and out, from any location.
 #### RouteGroupA.js   
 * provides a way of protecting multiple locations at once.
 #### ViewComponentA.js  
