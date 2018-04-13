@@ -4,7 +4,7 @@
 #### a web application consists of resources  
   * resources are found at a location using their address/endpoint.
 #### a react component has properties
-  * a property determines what is rendered by a component.
+  * a property determines what is rendered by a component.  
 #### a react component has working memory, which holds for each property a 'working value'
   * all properties must be loaded into working memory with its default working value or a saved one.  
   * manipulate the component by modifying the working values of its properties.
