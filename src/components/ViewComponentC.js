@@ -1,19 +1,19 @@
 //packages
 import React from 'react'
 //code
-const $context='ViewComponentC'
 class ViewComponentC extends React.Component{
     constructor(props){
         super(props)
         //configure routing
         //build memory
         this.state={
-            id:$context,
+            id:'ViewComponentC',
         }
         //other
     }
     render(){
-        const ViewComponentC=<React.Fragment>{this.state.id}</React.Fragment>
+        const wm=this.state
+        const ViewComponentC=<React.Fragment>{wm.id}</React.Fragment>
         return <div id="ViewComponentC">{ViewComponentC}</div>
     }
 }

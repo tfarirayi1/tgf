@@ -4,31 +4,32 @@ import RouteGroupA from './RouteGroupA'
 //styles
 import './styles/Index.css'
 import './styles/Shell.css'
-//npm
+//packages
 import React from 'react'
-import { BrowserRouter, Link, Route } from 'react-router-dom'
+import { Link, Route } from 'react-router-dom'
 import { Auth } from 'aws-amplify'
 //code
-var $routes
+var $locations
 var $location=window.history
 var $context='Shell'
 class Shell extends React.Component{
     cyclePropertyState(property,states){
-        //update memory
-        let nextState={}
-        let currentState=this.state
-        for(var i=0;i<states.length;i++){
-            if(currentState[property]===states[i]){
-                if(i===states.length-1){
-                    nextState[property]=states[0]
-                    break 
-                }else{
+        //update current state
+        this.setState((prevState)=>{
+            let nextState={}
+            let currentState=prevState
+            for(let i=0;i<states.length;i++){
+                if(currentState[property]===states[i]){
+                    if(i===states.length-1){
+                        nextState[property]=states[0]
+                        break
+                    }
                     nextState[property]=states[i+1]
                     break
                 }
             }
-        }
-        this.setState(()=>{return nextState})
+            return nextState
+        })
         //...the notify history
         // let newHistory=Object.assign({},window.history.state)
         // Object.assign(newHistory[$context],nextState)
@@ -41,18 +42,16 @@ class Shell extends React.Component{
     constructor(props){
         super(props)
         //configure routes
-        $routes=[
+        $locations=[
             {
-                address:'/', //index
+                endpoint:'/', //index
                 transcend:false,
                 resource:ViewComponentB,
-                cog:'0.x',
             },
             {
-                address:'/x',
+                endpoint:'/x',
                 transcend:true,
                 resource:RouteGroupA,
-                cog:'0.x',
             },
         ]
         //build state
@@ -65,14 +64,13 @@ class Shell extends React.Component{
         this.setupUserAuthentication()
     }
     render(){
-        const map=<div className="map">{$routes.map((route,index)=><Link key={index} to={route.address}>{route.address}<br/></Link>)}</div>
+        const links=$locations.map((route,index)=><Link key={index} to={route.endpoint}>{route.endpoint}<br/></Link>)
+        const map=<div className="map">{links}</div>
         const mapToggleButton=<div className="map-toggle-button" onClick={e=>this.cyclePropertyState('menu',['default','state2'])}></div>
-        const routes=$routes.map((route,index)=>{
-            return <Route key={index} exact={!route.transcend} path={route.address} component={route.resource}/>
-        })
+        const routes=$locations.map((route,index)=><Route key={index} exact={!route.transcend} path={route.endpoint} component={route.resource}/>)
         const view=<div className="view">{mapToggleButton}{routes}</div>
         const Shell=<React.Fragment>{map}{view}</React.Fragment>
-        return <BrowserRouter><div id="Shell" data-state-menu={this.state.menu}>{Shell}</div></BrowserRouter>
+        return <div id="Shell" data-state-menu={this.state.menu}>{Shell}</div>
     }
 }
 export default Shell
