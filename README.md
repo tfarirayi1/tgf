@@ -12,10 +12,10 @@
 * a web application consists of resources.  
 * resources are found at a location using their address/endpoint.
 #### description
-* provides user authentication
-* provides a way of displaying the resources at current location
-* provides a way of displaying all available locations from any location
-* provides a way of signing in from any location 
+* provides user authentication.
+* provides a way of displaying the resources at current location.
+* provides a way of displaying all available locations from any location.
+* provides a way of signing in from any location.
 #### packages
 + react  
   * component based javascript framework.
