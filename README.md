@@ -1,8 +1,8 @@
 ### project----project-zero-main
 #### [react](https://reactjs.org 'react homepage') web application boilerplate  
 ### philosophy  
-#### a web application consists of resources  
-#### resources are found at a location using their address/endpoint
+####  a web application consists of resources  
+####  resources are found at a location using their address/endpoint
 ### packages
 #### react  
   * component based javascript framework.
