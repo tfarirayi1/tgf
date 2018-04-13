@@ -6,8 +6,8 @@
 #### a react component has properties
   * a property determines what is rendered by a component.
 #### a react component has working memory, which holds for each property a 'working value'
-  * all properties must be loaded to working memory using the default working value or a saved one.  
-  * the component is manipulated by modifying the working value of a property.
+  * all properties must be loaded into working memory using its default working value or a saved one.  
+  * manipulate the component by modifying the working values of its properties.
 ### _packages
 #### react  
   * component based javascript framework.
