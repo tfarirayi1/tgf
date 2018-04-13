@@ -14,10 +14,10 @@
 #### Shell.js   
 * provides user authentication.
 * provides a way of accessing the resources at the current location.
-* provides a way of getting to one location from any location.
+* provides a way of getting to a location from any location.
 * provides a way of signing in from any location.
 #### RouteGroupA.js   
-* provides a way of protecting multiple locations in one place.
+* provides a way of protecting multiple locations at once.
 #### ViewComponentA.js  
 * a resource provided at a location.
 #### ViewComponentB.js  
