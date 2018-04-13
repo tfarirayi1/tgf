@@ -1,11 +1,11 @@
 ## project----project-zero-main  
 [react](https://reactjs.org 'react homepage') web application boilerplate
 ### components
-* Shell.js
-* RouteGroupA.js
-* ViewComponentA.js
-* ViewComponentB.js
-* ViewComponentC.js
+**Shell.js**  
+**RouteGroupA.js**  
+**ViewComponentA.js**  
+**ViewComponentB.js**
+**ViewComponentC.js**  
 
 ### Shell.js
 #### philosophy  
@@ -17,11 +17,11 @@
 * provides a way of displaying all available locations from any location
 * provides a way of signing in from any location 
 #### packages
-+ **react**  
++ react  
   * component based javascript framework.
   
-+ **react-router-dom**  
++ react-router-dom  
   * routing library for react.
   
-+ **aws-amplify**  
++ aws-amplify  
   * cognito identity authentication library.
