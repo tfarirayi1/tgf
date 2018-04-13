@@ -16,11 +16,11 @@
 * provides a way of displaying all available locations from any location
 * provides a way of signing in from any location 
 ##### packages
-*react*
-  *component based javascript framework.
+**react**
+  * component based javascript framework.
   
-*react-router-dom*
-  *routing library for react.
+**react-router-dom**
+  * routing library for react.
   
-*aws-amplify*
-  *cognito identity authentication library.
+**aws-amplify**
+  * cognito identity authentication library.
