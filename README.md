@@ -1,9 +1,9 @@
-### project----project-zero-main  
+### *project----project-zero-main*  
 #### [react](https://reactjs.org 'react homepage') web application boilerplate  
-### philosophy  
+### *philosophy*  
 #### a web application consists of resources  
 #### resources are found at a location using their address/endpoint
-### packages
+### *packages*
 #### react  
   * component based javascript framework.
   
@@ -12,7 +12,7 @@
   
 #### aws-amplify  
   * cognito identity authentication library.  
-### components   
+### *components*   
 #### Shell.js   
 * provides user authentication.
 * provides a way of displaying the resources at current location.
