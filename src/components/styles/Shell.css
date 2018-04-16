@@ -53,9 +53,6 @@
 #Shell
 .map-toggle-button::before {
     margin:0;
-    /* content:'\205D\25c9'; */
-    /* content:'\27a4'; */
-    content:'\27a0';
     content:'\276f';
     color:rgba(255,138,101 ,1);
     font-size:2ch;
@@ -66,5 +63,5 @@
 }
 #Shell[data-state-menu='state2']
 .map-toggle-button::before{
-    content:'\276e';
+    content:'\276e\a';
 }
