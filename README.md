@@ -26,6 +26,8 @@
 * router-component for 'origin/account'
 #### Help.js  
 * resource-component exposed at '/help'.
+#### Account.js  
+* resource-component exposed at '/account'.
 #### Faq.js  
 * resource-component exposed at '/help/faq'.
 #### AccessDenied.js
@@ -39,4 +41,5 @@
 * assumes responsibility for routing its sub-endpoints.
 #### resource-component
 * consumable resource exposed at an endpoint.
+* should never route.
 
