@@ -17,7 +17,7 @@
   * cognito identity authentication library.  
 ### _components   
 #### AppContainer.js   
-* container component
+* shell component
   * determines the visual layout of the application.
   * provides an always accessible hidden menu.
   * provides an always accessible login.
