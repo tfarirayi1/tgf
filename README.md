@@ -20,8 +20,10 @@
 * shell-component
 * provides an always accessible hidden app-menu.
 * provides an always accessible login resource.
+#### Origin.js
+* resource-component exposed at the endpoint 'origin/'.
 #### HelpRouter.js 
-* router-component for the endpoint 'origin/help'
+* router-component for the endpoint 'origin/help'.
 #### AccountRouter.js 
 * router-component for the endpoint 'origin/account'
 #### Help.js  
