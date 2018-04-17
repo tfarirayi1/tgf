@@ -19,8 +19,8 @@
 #### AppShell.js   
 * app-shell component
   * determines the visual layout of the application.
-  * provides an always accessible hide-or-show menu.
-  * provides an always accessible login.
+  * provides an always accessible hidden app menu.
+  * provides an always accessible hidden login.
   * provides routing for all non-origin endpoints (i.e 'origin/*').
 #### HelpRouter.js   
 * router component
@@ -28,9 +28,9 @@
   * takes responsibility for routing its sub-endpoints.
 #### Help.js  
 * resource component
-  * ui resource provided at '/help'.
+  * ui resource exposed at '/help'.
 #### Faq.js  
 * resource component
-  * ui resource provided at '/help/faq'.
+  * ui resource exposed at '/help/faq'.
 #### AccessDenied.js
 * ui resource exposed at all restricted endpoints when the user is not authorised.
