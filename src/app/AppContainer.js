@@ -1,17 +1,17 @@
-//components
-import ViewComponentB from './ViewComponentB'
-import GateA from './GateA'
-//styles
-import './styles/Index.css'
-import './styles/Shell.css'
 //packages
 import React from 'react'
 import { Link, Route } from 'react-router-dom'
 import { Auth } from 'aws-amplify'
+//components
+import Index from './Index'
+import HelpContainer from './HelpContainer'
+//styles
+import './styles/Index.css'
+import './styles/Container.css'
 //code
-let $routes
+var $routes
 const $context='Shell'
-class Shell extends React.Component{
+class AppContainer extends React.Component{
     cyclePropertyState(property,states){
         //update current state
         this.setState((prevState)=>{
@@ -45,13 +45,13 @@ class Shell extends React.Component{
             {
                 endpoint:'/', //index
                 transcend:false,
-                resource:ViewComponentB,
+                resource:Index,
             },
             {
-                endpoint:'/x',
+                endpoint:'/help',
                 transcend:true,
-                resource:GateA,
-            },
+                resource:HelpContainer,
+            }
         ]
         //build working memory
         const $location=window.history
@@ -73,4 +73,4 @@ class Shell extends React.Component{
         return <div id="Shell" data-state-menu={this.state.menu}>{Shell}</div>
     }
 }
-export default Shell
+export default AppContainer

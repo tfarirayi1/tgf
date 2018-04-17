@@ -1,13 +1,13 @@
 ### _project----project-zero-main
 #### [react](https://reactjs.org 'react homepage') web application boilerplate  
 ### _philosophy  
-#### a web application consists of resources  
-  * resources are found at a location using their address/endpoint.
+#### a web application consists of endpoints  
+  * an endpoint provides a set of resources
 #### a react component has properties
-  * a property determines what is rendered by a component.  
+  * the properties can determine what the component looks like.  
 #### a react component has working memory, which holds for each property a 'working value'
-  * all properties must be loaded into working memory with their default working values or saved ones.  
-  * manipulate the component by modifying the working values of its properties.
+  * properties can loaded into working memory with their historical working values or default ones.  
+  * a component is manipulated by changing the working values of its properties.
 ### _packages
 #### react  
   * component based javascript framework.
@@ -16,15 +16,17 @@
 #### aws-amplify  
   * cognito identity authentication library.  
 ### _components   
-#### Shell.js   
-* provides a way of accessing the resources at the current location.
-* provides a way of getting to a location from any location.
-* provides a way of signing in and out, from any location.
-#### GateA.js   
-* provides a way of protecting multiple locations at once.
-#### ViewComponentA.js  
-* a resource provided at a location.
-#### ViewComponentB.js  
-* a resource provided at a location.
-#### ViewComponentC.js
-* a resource provided at a location.
+#### AppContainer.js   
+* must determine visual layout of the application.
+* must provide a hidden menu.
+* must provide a persistent toolbar.
+* must provide a persistent way of signing in and out.
+#### HelpContainer.js   
+* an endpoint-container.
+* provides a way of protecting an endpoint and its child endpoints.
+#### Help.js  
+* resource provided at '/help'.
+#### Faq.js  
+* resource provided at '/help/faq'.
+#### AccessDenied.js
+* resource exposed at all restricted endpoints when the user is not authorised.
