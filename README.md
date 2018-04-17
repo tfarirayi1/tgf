@@ -25,7 +25,7 @@
 #### HelpRouter.js 
 * router-component for the endpoint 'origin/help'.
 #### AccountRouter.js 
-* router-component for the endpoint 'origin/account'
+* router-component for the endpoint 'origin/account'.
 #### Help.js  
 * resource-component exposed at the endpoint '/help'.
 #### Account.js  
