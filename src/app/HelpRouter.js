@@ -31,7 +31,7 @@ class HelpRouter extends React.Component{
                 endpoint:path+'/faq',
                 transcend:false,
                 resource:Faq,
-                public:false,
+                public:true,
             }
         ]
         //build memory

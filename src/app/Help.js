@@ -18,7 +18,8 @@ class Help extends React.Component{
     render(){
         const wm=this.state //working memory
         const Help=<React.Fragment>{wm.id}</React.Fragment>
-        return <div id="Help">{Help}</div>
+        const link=<div><Link to={this.props.match.url+'/faq'}>&nbsp;faq</Link></div>
+        return <div id="Help">{Help}{link}</div>
     }
 }
 export default Help

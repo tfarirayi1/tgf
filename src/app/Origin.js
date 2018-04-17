@@ -20,18 +20,20 @@ class Origin extends React.Component{
         const $links=[
             {
                 path:'/',
-                title:'origin'
+                title:'Origin'
             },
             {
                 path:'/help',
-                title:'help'
+                title:'Help'
             },
             {
-                path:'/help/faq',
-                title:'faq'
+                path:'/account',
+                title:'Account'
             },
         ]
-        const map=$links.map((link,i)=><div key={i}><Link to={link.path}>&nbsp;{link.title}*</Link></div>)
+        const map=$links.map((link,i)=>{
+            return link.title===$context?null:<div key={i}><Link to={link.path}>&nbsp;{link.title}</Link></div>
+        })
         const Origin=<React.Fragment>{wm.id}{map}</React.Fragment>
         return <div id="Origin">{Origin}</div>
     }
