@@ -1,10 +1,10 @@
 ### _project----project-zero-main
 #### [react](https://reactjs.org 'react homepage') web-application boilerplate  
 ### _philosophy  
-#### a web-application consists of endpoints  
-  * an endpoint exposes a set of resources.
+#### a web-application is a colection of endpoints  
+  * each endpoint exposes one or more of resources.
 #### a react component has properties
-  * the properties are used to determine the behaviour and look of a component.  
+  * these properties can be used to determine the behaviour and look of a component.  
 #### a react component has working memory which can hold the 'working value' of a property
   * properties are loaded into working memory with their historical working values or with their default working values.  
   * a component is manipulated in realtime by changing the working values of its properties.
@@ -19,19 +19,19 @@
 #### Shell.js   
 * shell-component
 * provides an always accessible hidden app-menu.
-* provides an always accessible hidden app-login.
+* provides an always accessible login resource.
 #### HelpRouter.js 
-* router-component for 'origin/help'
+* router-component for the endpoint 'origin/help'
 #### AccountRouter.js 
-* router-component for 'origin/account'
+* router-component for the endpoint 'origin/account'
 #### Help.js  
-* resource-component exposed at '/help'.
+* resource-component exposed at the endpoint '/help'.
 #### Account.js  
-* resource-component exposed at '/account'.
+* resource-component exposed at the endpoint '/account'.
 #### Faq.js  
-* resource-component exposed at '/help/faq'.
+* resource-component exposed at the endpoint '/help/faq'.
 #### AccessDenied.js
-* resource-component exposed at all restricted endpoints when the user is not authorised.
+* resource-component exposed at all private endpoints when the user is not authorised.
 ### _component types
 #### shell-component
 * determines the visual layout of the application.
