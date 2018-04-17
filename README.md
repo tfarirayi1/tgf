@@ -21,7 +21,7 @@
   * determines the visual layout of the application.
   * provides an always accessible hide-or-show menu.
   * provides an always accessible login.
-  * provides routing for all root-folder endpoints (i.e 'origin/*').
+  * provides routing for all non-origin endpoints (i.e 'origin/*').
 #### HelpRouter.js   
 * router component
   * provides a way of protecting an endpoint and its sub-endpoints.
