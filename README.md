@@ -1,7 +1,7 @@
 ### _project----project-zero-main
 #### [react](https://reactjs.org 'react homepage') web-application boilerplate  
 ### _philosophy  
-#### a web-application is a colection of endpoints  
+#### a web-application is a collection of endpoints  
   * each endpoint exposes one or more of resources.
 #### a react component has properties
   * these properties can be used to determine the behaviour and look of a component.  
