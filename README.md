@@ -18,16 +18,16 @@
 ### _components   
 #### Shell.js   
 * 'shell-component'
-  * provides an always accessible hidden app-menu.
-  * provides an always accessible hidden app-login.
+* provides an always accessible hidden app-menu.
+* provides an always accessible hidden app-login.
 #### HelpRouter.js 
 * 'router component'
 #### Help.js  
 * 'resource component' exposed at '/help'.
 #### Faq.js  
-* resource exposed at '/help/faq'.
+* 'resource component' exposed at '/help/faq'.
 #### AccessDenied.js
-* resource exposed at all restricted endpoints when the user is not authorised.
+* 'resource component' exposed at all restricted endpoints when the user is not authorised.
 ### _component types
 #### shell component
 * determines the visual layout of the application.
