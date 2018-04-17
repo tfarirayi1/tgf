@@ -4,7 +4,7 @@ import { Link, Route } from 'react-router-dom'
 import { Auth } from 'aws-amplify'
 //components
 import Index from './Index'
-import HelpContainer from './HelpContainer'
+import HelpRouter from './HelpRouter'
 //styles
 import './styles/Index.css'
 import './styles/Container.css'
@@ -50,7 +50,7 @@ class AppContainer extends React.Component{
             {
                 endpoint:'/help',
                 transcend:true,
-                resource:HelpContainer,
+                resource:HelpRouter,
             }
         ]
         //build working memory

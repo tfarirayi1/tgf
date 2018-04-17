@@ -22,15 +22,15 @@
   * provides an always accessible hidden menu.
   * provides an always accessible login.
   * provides routing.
-#### HelpContainer.js   
-* endpoint-container component
-  * provides a way of protecting an endpoint and/or its child endpoints.
+#### HelpRouter.js   
+* endpoint-router component
+  * provides a way of protecting a '1st level endpoint' and/or its child endpoints.
   * provides routing.
 #### Help.js  
-* resource-component
+* resource component
   * resource provided at '/help'.
 #### Faq.js  
-* resource-component
+* resource component
   * resource provided at '/help/faq'.
 #### AccessDenied.js
 * resource exposed at all restricted endpoints when the user is not authorised.
