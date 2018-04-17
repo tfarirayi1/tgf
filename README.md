@@ -17,17 +17,18 @@
   * cognito identity authentication library.  
 ### _components   
 #### AppContainer.js   
-* an app-container-component.
-* determines the visual layout of the application.
-* provides an always accessible hidden menu.
-* provides an always accessible login.
+* 'app-container component':
+  * determines the visual layout of the application.
+  * provides an always accessible hidden menu.
+  * provides an always accessible login.
 #### HelpContainer.js   
-* an endpoint-container-component.
-* provides a way of protecting an endpoint and its child endpoints.
+* 'endpoint-container component':
+   * provides a way of protecting an endpoint and/or its child endpoints.
 #### Help.js  
-* a resource-component.
-* resource provided at '/help'.
+* 'resource-component':
+   * resource provided at '/help'.
 #### Faq.js  
-* resource provided at '/help/faq'.
+* 'resource-component':
+   * resource provided at '/help/faq'.
 #### AccessDenied.js
 * resource exposed at all restricted endpoints when the user is not authorised.
