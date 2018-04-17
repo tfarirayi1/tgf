@@ -2,8 +2,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
-import AppContainer from './app/AppContainer'
+import AppShell from './app/AppShell'
 //code
 const $root=document.getElementById('root')
-const App=<BrowserRouter><AppContainer/></BrowserRouter>
+const App=<BrowserRouter><AppShell/></BrowserRouter>
 ReactDOM.render(App,$root)

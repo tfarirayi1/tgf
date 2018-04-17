@@ -16,16 +16,16 @@
 #### aws-amplify  
   * cognito identity authentication library.  
 ### _components   
-#### AppContainer.js   
-* shell component
+#### AppShell.js   
+* app-shell component
   * determines the visual layout of the application.
   * provides an always accessible hidden menu.
   * provides an always accessible login.
-  * provides routing for all first-level endpoints.
+  * provides routing for all root-folder endpoints (i.e 'origin/*').
 #### HelpRouter.js   
 * router component
   * provides a way of protecting an endpoint and its sub-endpoints.
-  * responsible for routing its sub-endpoints.
+  * takes responsibility for routing its sub-endpoints.
 #### Help.js  
 * resource component
   * ui resource provided at '/help'.
