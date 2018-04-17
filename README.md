@@ -19,7 +19,7 @@
 #### AppShell.js   
 * app-shell component
   * determines the visual layout of the application.
-  * provides an always accessible hidden menu.
+  * provides an always accessible hide-or-show menu.
   * provides an always accessible login.
   * provides routing for all root-folder endpoints (i.e 'origin/*').
 #### HelpRouter.js   
