@@ -2,11 +2,11 @@
 #### [react](https://reactjs.org 'react homepage') web-application boilerplate  
 ### _philosophy  
 #### a web-application consists of endpoints  
-  * an endpoint exposes a set of resources
+  * an endpoint exposes a set of resources.
 #### a react component has properties
   * the properties are used to determine the behaviour and look of a component.  
-#### a react component has working memory, which can store a property and its 'state value'
-  * properties are loaded into working memory with their historical state values or default ones.  
+#### a react component has working memory, which can store a property with its 'state value'
+  * properties are loaded into working memory with their historical state values or with default state values.  
   * a component is manipulated by changing the state values of its properties.
 ### _packages
 #### react  
