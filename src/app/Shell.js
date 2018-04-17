@@ -3,15 +3,16 @@ import React from 'react'
 import { Link, Route } from 'react-router-dom'
 import { Auth } from 'aws-amplify'
 //components
-import Index from './Index'
+import Origin from './Origin'
 import HelpRouter from './HelpRouter'
+import AccountRouter from './AccountRouter'
 //styles
-import './styles/Index.css'
+import './styles/Origin.css'
 import './styles/Shell.css'
 //code
 var $routes
 const $context='Shell'
-class AppContainer extends React.Component{
+class Shell extends React.Component{
     cyclePropertyState(property,states){
         //update current state
         this.setState((prevState)=>{
@@ -45,12 +46,17 @@ class AppContainer extends React.Component{
             {
                 endpoint:'/', //index
                 transcend:false,
-                resource:Index,
+                resource:Origin,
             },
             {
                 endpoint:'/help',
                 transcend:true,
                 resource:HelpRouter,
+            },
+            {
+                endpoint:'/account',
+                transcend:true,
+                resource:AccountRouter,
             }
         ]
         //build working memory
@@ -73,4 +79,4 @@ class AppContainer extends React.Component{
         return <div id="Shell" data-state-menu={this.state.menu}>{Shell}</div>
     }
 }
-export default AppContainer
+export default Shell

@@ -3,13 +3,12 @@ import React from 'react'
 import { Route } from 'react-router-dom'
 import { Auth } from 'aws-amplify'
 //components
-import Faq from './Faq'
-import Help from './Help'
+import Account from './Account'
 import AccessDenied from './AccessDenied'
 //code
 var $routes
-const $context='HelpRouter'
-class HelpRouter extends React.Component{
+const $context='AccountRouter'
+class AccountRouter extends React.Component{
     checkIdentity(){
         //verify session
         Auth.currentSession()
@@ -24,15 +23,9 @@ class HelpRouter extends React.Component{
             {
                 endpoint:path,
                 transcend:false, 
-                resource:Help,
-                public:true,
-            },
-            {
-                endpoint:path+'/faq',
-                transcend:false,
-                resource:Faq,
+                resource:Account,
                 public:false,
-            }
+            },
         ]
         //build memory
         const $location=props.history
@@ -50,8 +43,8 @@ class HelpRouter extends React.Component{
         const wm=this.state
         const authorised=$routes.map((route,index)=><Route key={index} exact={!route.transcend} path={route.endpoint} component={route.resource}/>)
         const unauthorised=$routes.map((route,index)=>{return (route.public?<Route key={index} exact={!route.transcend} path={route.endpoint} component={route.resource}/>:<Route key={index} exact={true} path={route.endpoint} component={AccessDenied} />)})
-        const HelpRouter=wm.status==='authorised'?authorised:unauthorised
-        return <div id="HelpRouter">{HelpRouter}</div>
+        const AccountRouter=wm.status==='authorised'?authorised:unauthorised
+        return <div id="AccountRouter">{AccountRouter}</div>
     }
 }
-export default HelpRouter
+export default AccountRouter

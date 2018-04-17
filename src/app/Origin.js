@@ -2,8 +2,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom' //eslint-disable-line
 //code
-const $context='Index'
-class Index extends React.Component{
+const $context='Origin'
+class Origin extends React.Component{
     constructor(props){
         super(props)
         //build working memory
@@ -20,7 +20,7 @@ class Index extends React.Component{
         const $links=[
             {
                 path:'/',
-                title:'home'
+                title:'origin'
             },
             {
                 path:'/help',
@@ -32,8 +32,8 @@ class Index extends React.Component{
             },
         ]
         const map=$links.map((link,i)=><div key={i}><Link to={link.path}>&nbsp;{link.title}*</Link></div>)
-        const Index=<React.Fragment>{wm.id}{map}</React.Fragment>
-        return <div id="Index">{Index}</div>
+        const Origin=<React.Fragment>{wm.id}{map}</React.Fragment>
+        return <div id="Origin">{Origin}</div>
     }
 }
-export default Index
+export default Origin
