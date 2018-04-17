@@ -17,23 +17,23 @@
   * cognito identity authentication library.  
 ### _components   
 #### Shell.js   
-* shell-component
+* *shell-component*.
 * provides an always accessible hidden app-menu.
 * provides an always accessible login resource.
 #### Origin.js
-* resource-component exposed at the endpoint 'origin/'.
+* *resource-component* exposed at the endpoint 'origin/'.
 #### HelpRouter.js 
-* router-component for the endpoint 'origin/help'.
+* *router-component* for the endpoint 'origin/help'.
 #### AccountRouter.js 
-* router-component for the endpoint 'origin/account'.
+* *router-component* for the endpoint 'origin/account'.
 #### Help.js  
-* resource-component exposed at the endpoint '/help'.
+* *resource-component* exposed at the endpoint '/help'.
 #### Account.js  
-* resource-component exposed at the endpoint '/account'.
+* *resource-component* exposed at the endpoint '/account'.
 #### Faq.js  
-* resource-component exposed at the endpoint '/help/faq'.
+* *resource-component* exposed at the endpoint '/help/faq'.
 #### AccessDenied.js
-* resource-component exposed at all private endpoints when the user is not authorised.
+* *resource-component* exposed at all private endpoints when the user is not authorised.
 ### _component types
 #### shell-component
 * determines the visual layout of the application.
