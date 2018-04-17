@@ -5,9 +5,9 @@
   * an endpoint exposes a set of resources.
 #### a react component has properties
   * the properties are used to determine the behaviour and look of a component.  
-#### a react component has working memory, which can store a property with its 'state value'
-  * properties are loaded into working memory with their historical state values or with default state values.  
-  * a component is manipulated by changing the state values of its properties.
+#### a react component has working memory which can store the 'working value' of a property
+  * properties are loaded into working memory with their historical working values or with default working values.  
+  * a component is manipulated in realtime by changing the working values of its properties.
 ### _packages
 #### react  
   * component based javascript framework.
