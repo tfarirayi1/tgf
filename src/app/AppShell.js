@@ -7,7 +7,7 @@ import Index from './Index'
 import HelpRouter from './HelpRouter'
 //styles
 import './styles/Index.css'
-import './styles/Container.css'
+import './styles/Shell.css'
 //code
 var $routes
 const $context='Shell'
