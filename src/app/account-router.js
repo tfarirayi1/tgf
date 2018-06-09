@@ -3,8 +3,8 @@ import React from 'react'
 import { Route } from 'react-router-dom'
 import { Auth } from 'aws-amplify'
 //components
-import Account from './Account'
-import AccessDenied from './AccessDenied'
+import Account from './account'
+import AccessDenied from './access-denied'
 //code
 var $routes
 const $context='AccountRouter'

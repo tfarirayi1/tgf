@@ -3,12 +3,13 @@ import React from 'react'
 import { Route } from 'react-router-dom'
 import { Auth } from 'aws-amplify'
 //components
-import Faq from './Faq'
-import Help from './Help'
-import AccessDenied from './AccessDenied'
-//code
+import Faq from './faq'
+import Help from './help'
+import AccessDenied from './access-denied'
+//default variables
 var $routes
 const $context='HelpRouter'
+//component
 class HelpRouter extends React.Component{
     checkIdentity(){
         //verify session
