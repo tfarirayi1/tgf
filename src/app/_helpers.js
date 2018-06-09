@@ -26,9 +26,9 @@ class Artefact{
 class Salon{
     constructor(){
         this.name;
-        this.dressers//dresser
-        this.hairdos//hairdo
-        this.appointments//booking
+        this.dressers//[dresser]
+        this.hairdos//[hairdo]
+        this.appointments//[booking]
     }
 }
 class Dresser{
@@ -43,7 +43,7 @@ class Hairdo{
         this.name;
         this.description;
         this.duration;
-        this.dressers//dresser
+        this.dressers;//[dresser]
     }
 }
 class Booking{
@@ -56,6 +56,8 @@ class Booking{
         this.duration;
     }
 }
+//enter salon
+//view menu, hairdresser calendar or general calendar
 function f1(a,b,c){
     //property-builder
     const _context=a;
