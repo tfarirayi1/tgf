@@ -5,6 +5,10 @@ import { BrowserRouter } from 'react-router-dom';
 //components
 import Shell from './app/shell';
 //code
-const $root=document.getElementById('root')
-const app=<BrowserRouter><Shell/></BrowserRouter>
-ReactDOM.render(app,$root)
+const Mount=document.getElementById('root');
+const Application=(
+    <BrowserRouter>
+        <Shell/>
+    </BrowserRouter>
+);
+ReactDOM.render(Application,Mount);
