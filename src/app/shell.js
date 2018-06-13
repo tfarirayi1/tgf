@@ -12,13 +12,13 @@ const Context='Shell';
 export default class Shell extends React.Component{
     constructor(props){
         super(props);
+        //configure-authentication
         f4();
         //build-working-memory
         this.state={
             id:Context,
             menu:this.f3('menu','default')
         };
-        this.f2();
     }
     render(){
         const Links=[
@@ -37,7 +37,7 @@ export default class Shell extends React.Component{
             }
         ];
         const routes=Routes.map((item,index)=>{
-            return (
+            return(
                 <div key={index}>
                     <Route exact={item.exact} path={item.endpoint} component={item.component}/>
                 </div>
@@ -50,12 +50,6 @@ export default class Shell extends React.Component{
                 </div>
             );
         });
-        //render-html
-        const layer2=(
-            <div className="layer2">
-                <div className="menu">{mainMenu}</div>
-            </div>
-        );
         const layer1=(
             <div className="layer1">
                 <div className="tool-panel">
@@ -65,12 +59,18 @@ export default class Shell extends React.Component{
                         <NavLink to='/'>maona-systems&trade;</NavLink>
                     </div>
                 </div>
-                <div className="view">{routes}</div>
+                <div className="view">
+                    {routes}
+                </div>
+            </div>
+        );
+        const layer2=(
+            <div className="layer2">
                 <div className="menu">{mainMenu}</div>
             </div>
         );
-        return (
-            <div id={Context} data-menu-state={this.state.menu}>{layer1}</div>
+        return(
+            <div id={Context} data-menu-state={this.state.menu}>{layer2}{layer1}</div>
         );
     }
     f1(propertyName,states){
@@ -94,9 +94,6 @@ export default class Shell extends React.Component{
         // let newHistory=Object.assign({},window.history.state)
         // Object.assign(newHistory[$context],nextState)
         // window.history.pushState(newHistory,'')
-    }
-    f2(){
-    
     }
     f3(propertyName,defaultValue){
         //property-builder

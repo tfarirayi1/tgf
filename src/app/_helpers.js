@@ -61,14 +61,14 @@ class Booking{
 //view menu, hairdresser calendar or general calendar
 export function f1(a,b,c){
     //property-builder
-    const _context=a;
-    const propertyName=b;
-    const defaultValue=c;
+    const _context=arguments[0];
+    const propertyName=arguments[1];
+    const defaultValue=arguments[2];
     const history=window.history;
         return history.state ? ( history.state[_context] ? history.state[_context][propertyName] || defaultValue : defaultValue ) : defaultValue;
 }
 export function f2(a){
-    const query=a;
+    const query=arguments[0];
     const client=new GraphQLClient('http://localhost:3333/',{mode:'cors'});
     client.request(query).then((response)=>{
         return console.log(response);

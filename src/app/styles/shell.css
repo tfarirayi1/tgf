@@ -1,127 +1,118 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 @import url('https://fonts.googleapis.com/css?family=Chivo');
-body {
-    margin:0;
-    font-size:33pt;
-    font-family:sans-serif;
-    /* text-align:center; */
+/* 
+[REF]
+pt is 1/72nd of an inch .
+ch is the width of zero in the elements font.
+rem is the font-size of the root element.
+em is the calculated font-size of the element.
+when zooming the pixels are doubled in size.
+*/
+:root{
+    font-size:19pt;
+}
+@media(orientation:landscape){
+}
+html,body{
+    margin:auto;
+    width:100%;
+    height:100%;
+    box-sizing:inherit;
     touch-action:manipulation;
+    cursor:default;
+    user-select:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
 }
 div {
-    margin:0;
-    padding:0;
     box-sizing:border-box;
-    /* text-align:center; */
-    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    padding:0;
+    margin:0;
 }
 a {
     text-decoration:none;
-    color:rgba(0, 0, 0, 0.7);
-    padding:0;
+    color:rgba(0, 0, 0, 0.6);
+}
+a::before{
+    content:'\02c4';
 }
 #Shell{
     position:fixed;
-    height:100%;
+    margin:auto;
     width:100%;
-    left:0;
-    background-color:rgba(255,138,101,0);
-    z-index:1;
-    cursor:default;
-    user-select:none;
-    display:flex;
-    flex-direction:row;
-    flex-wrap:nowrap;
-    align-items:stretch;
+    height:100%;
+    background-color:rgba(255,138,101,0.2);
 }
 #Shell
 .layer1{
-    /* position:absolute; */
-    z-index:3;
-    width:100%;
+    max-width:297mm;
     height:100%;
-    /* left:-87%; */
-    /* left:0%; */
+    margin:auto;
     display:flex;
-    /* display:none; */
+    align-items:stretch;
     flex-direction:row;
     flex-wrap:nowrap;
-    align-items:stretch;
 }
 #Shell 
 .layer2{
-    position:absolute;
+    max-width:297mm;
     height:100%;
-    width:100%;
-    right:0%;
-    z-index:2;
-    display:flex;
-    flex-direction:row;
-    flex-wrap:nowrap;
-    align-items:stretch;
-}
-#Shell[data-menu-state='state2']
-.view{
+    margin:auto;
     display:none;
+    /* display:flex; */
+    /* flex-direction:row; */
+    /* flex-wrap:nowrap; */
+    /* align-items:stretch; */
 }
-#Shell[data-menu-state='state2']
+#Shell[data-menuState='state2']
+.view{
+    /* display:none; */
+}
+#Shell[data-menuState='state2']
 .menu{
-    display:block;
+    /* display:block; */
 }
 #Shell
 .menu{
-    padding:2%;
+    /* padding:2%; */
     /* text-align:center; */
-    flex-grow:1;
-    display:none;
-    background-color:rgba(255,138,101,1);
+    /* flex-grow:1; */
+    /* display:none; */
+    /* background-color:rgba(255,138,101,1); */
 
     /* font-style:italic; */
     /* font-size:77%; */
 }
 #Shell
-.view{
-    padding:2%;
-    background-color:rgba(38,50,56,0.7);
-    flex-grow:1;
-    height:100%;
-    overflow-y:auto;
-}
-#Shell
-.more-button::before{
-    content:'\002b';
-    cursor:pointer;
-}
-#Shell[data-menu-state='state2']
-.more-button::before{
-    content:'\00d7';
-}
-#Shell
 .tool-panel{
     flex-grow:0;
-    min-width:2.7ch;
-    max-width:2.7ch;
-    max-height:100%;
-    height:100%;
-    padding:1%;
-    text-align:center;
-    font-size:80%;
-    color:rgba(38,50,56,1);
-    background-color:rgba(255,138,101,1);
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 1px 5px 0 rgba(0, 0, 0, 0.12),
     0 3px 1px -2px rgba(0, 0, 0, 0.2);
 }
 #Shell
 .tool-panel
+.more-button::before{
+    content:'\002b';
+    /* content:'\205d'; */
+    /* cursor:pointer; */
+}
+#Shell[data-menuState='state2']
+.tool-panel
+.more-button::before{
+    /* content:'\00d7'; */
+}
+#Shell
+.tool-panel
 .label{
-    /* 
     writing-mode:vertical-lr;
+    -ms-writing-mode:vertical-lr;
     text-overflow:ellipsis;
     white-space:nowrap;
-    overflow:hidden; */
-    text-orientation:sideways-right;
-    transform:rotate(90deg);
+    overflow:hidden;
     white-space:nowrap;
-    padding:3%;
-    margin:3%;
+}
+#Shell
+.layer1
+.view{
+    flex-grow:1;
 }
