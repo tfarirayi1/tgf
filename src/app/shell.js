@@ -17,10 +17,11 @@ export default class Shell extends React.Component{
         //build-working-memory
         this.state={
             id:Context,
-            menu:this.f3('menu','default')
+            menu:this.f3('menu','state1')
         };
     }
     render(){
+        console.log(this.state);
         const Links=[
             {
                 endpoint:'/services',
@@ -53,7 +54,7 @@ export default class Shell extends React.Component{
         const layer1=(
             <div className="layer1">
                 <div className="tool-panel">
-                    <div className="more-button" onClick={e=>this.f1('menu',['default','state2'])}>
+                    <div className="more-button" onClick={e=>this.f1('menu',['state1','state2'])}>
                     </div>
                     <div className="label" onClick={e=>this.f4('menu')}>
                         <NavLink to='/'>maona-systems&trade;</NavLink>
@@ -62,15 +63,15 @@ export default class Shell extends React.Component{
                 <div className="view">
                     {routes}
                 </div>
-            </div>
-        );
-        const layer2=(
-            <div className="layer2">
-                <div className="menu">{mainMenu}</div>
+                <div className="menu">
+                    {mainMenu}
+                </div>
             </div>
         );
         return(
-            <div id={Context} data-menu-state={this.state.menu}>{layer2}{layer1}</div>
+            <div id={Context} className={this.state.menu}>
+                {layer1}
+            </div>
         );
     }
     f1(propertyName,states){
@@ -104,7 +105,7 @@ export default class Shell extends React.Component{
         //reset-property
         this.setState((prevState)=>{
             let nextState={};
-            nextState[propertyName]='default';
+            nextState[propertyName]='state1';
             return nextState;
         });
     }

@@ -1,62 +1,60 @@
 import { Auth } from 'aws-amplify';
 import { GraphQLClient } from 'graphql-request';
-class Project{
-    constructor(a){
-        this.id='001';
-        this.type=a;
-    }
-}
-class Server{
-    constructor(a,b,c,d,e){
-        this.provider=a;
-        this.type=b;
-        this.owner=c;
-
-        this.id=Date.now();
-
-        this.cpu=d;
-        this.mem=e;
-    }
-}
-class Artefact{
-    constructor(){
-        this.name='';
-        this.type='';
-    }
-}
-class Salon{
-    constructor(){
-        this.name;
-        this.dressers//[dresser]
-        this.hairdos//[hairdo]
-        this.appointments//[booking]
-    }
-}
-class Dresser{
-    constructor(){
-        this.id;
-        this.type;
-        this.bookings;//reference
-    }
-}
-class Hairdo{
-    constructor(){
-        this.name;
-        this.description;
-        this.duration;
-        this.dressers;//[dresser]
-    }
-}
-class Booking{
-    constructor(){
-        this.number;
-        this.dresser;//reference
-        this.hairdo;
-        this.date;
-        this.startTime;
-        this.duration;
-    }
-}
+// class Project{
+//     constructor(a){
+//         this.id='001';
+//         this.type=a;
+//     }
+// }
+// class Server{
+//     constructor(a,b,c,d,e){
+//         this.provider=a;
+//         this.type=b;
+//         this.owner=c;
+//         this.id=Date.now();
+//         this.cpu=d;
+//         this.mem=e;
+//     }
+// }
+// class Artefact{
+//     constructor(){
+//         this.name='';
+//         this.type='';
+//     }
+// }
+// class Salon{
+//     constructor(){
+//         this.name;
+//         this.dressers//[dresser]
+//         this.hairdos//[hairdo]
+//         this.appointments//[booking]
+//     }
+// }
+// class Dresser{
+//     constructor(){
+//         this.id;
+//         this.type;
+//         this.bookings;//reference
+//     }
+// }
+// class Hairdo{
+//     constructor(){
+//         this.name;
+//         this.description;
+//         this.duration;
+//         this.dressers;//[dresser]
+//     }
+// }
+// class Booking{
+//     constructor(){
+//         this.number;
+//         this.dresser;//reference
+//         this.hairdo;
+//         this.date;
+//         this.startTime;
+//         this.duration;
+//     }
+// }
 //enter salon
 //view menu, hairdresser calendar or general calendar
 export function f1(a,b,c){
@@ -83,6 +81,6 @@ export function f4(){
         identityPoolId:'eu-west-1:25388842-fe3f-47da-b371-8523843a6018',
         userPoolId:'eu-west-1_CTOnEIecG',
         userPoolWebClientId:'1f39eiq38scgarj4l6hdnmlqct',
-        mandatorySignIn:true
+        mandatorySignIn:true,
     });
 }

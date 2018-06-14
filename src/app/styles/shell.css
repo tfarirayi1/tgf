@@ -9,9 +9,8 @@ em is the calculated font-size of the element.
 when zooming the pixels are doubled in size.
 */
 :root{
-    font-size:19pt;
-}
-@media(orientation:landscape){
+    font-size:13ch;
+    font-family:Poppins;
 }
 html,body{
     margin:auto;
@@ -19,7 +18,6 @@ html,body{
     height:100%;
     box-sizing:inherit;
     touch-action:manipulation;
-    cursor:default;
     user-select:none;
     -webkit-tap-highlight-color:rgba(0,0,0,0);
 }
@@ -30,50 +28,81 @@ div {
 }
 a {
     text-decoration:none;
+    cursor:pointer;
     color:rgba(0, 0, 0, 0.6);
 }
 a::before{
-    content:'\02c4';
 }
 #Shell{
     position:fixed;
+    display:flex;
+    /* padding:0.2rem; */
+    flex-direction:row;
     margin:auto;
+    overflow:auto;
     width:100%;
+    /* align-content:stretch; */
     height:100%;
-    background-color:rgba(255,138,101,0.2);
+    box-sizing:content-box;
+    justify-content:flex-start;
+    align-items:flex-start;
+    background-color:rgba(255,138,101,0);
 }
-#Shell
-.layer1{
-    max-width:297mm;
-    height:100%;
+#Shell .layer1{
     margin:auto;
     display:flex;
-    align-items:stretch;
     flex-direction:row;
+    align-items:flex-start;
+    justify-content:flex-start;
     flex-wrap:nowrap;
+    /* box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2); */
 }
-#Shell 
-.layer2{
-    max-width:297mm;
-    height:100%;
-    margin:auto;
+#Shell .layer1 .view{
+    /* flex-grow:1; */
+    padding:0.3rem;
+}
+#Shell .layer1 .tool-panel{
+    position:sticky;
+    top:0;
+    max-height:100vh;
+    padding:0.1rem;
+    width:1.5rem;
+    /* border-radius:0.1rem; */
+    display:flex;
+    flex-direction:column;
+    /* height:fit-content; */
+    align-items:center;
+    justify-content:flex-start;
+    background-color:rgba(255,138,101,0.7);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+#Shell .layer1 .menu{
     display:none;
+    /* height:100%; */
+    /* margin:auto; */
+    /* box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2); */
     /* display:flex; */
     /* flex-direction:row; */
     /* flex-wrap:nowrap; */
     /* align-items:stretch; */
 }
-#Shell[data-menuState='state2']
-.view{
-    /* display:none; */
+#Shell.state2 .view{
+    display:none;
 }
-#Shell[data-menuState='state2']
-.menu{
-    /* display:block; */
+#Shell.state2 .menu{
+    display:block;
+    /* flex-direction:column; */
+    
 }
-#Shell
-.menu{
-    /* padding:2%; */
+#Shell .menu{
+    padding:0.3rem;
+
     /* text-align:center; */
     /* flex-grow:1; */
     /* display:none; */
@@ -82,37 +111,21 @@ a::before{
     /* font-style:italic; */
     /* font-size:77%; */
 }
-#Shell
-.tool-panel{
-    flex-grow:0;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-    0 1px 5px 0 rgba(0, 0, 0, 0.12),
-    0 3px 1px -2px rgba(0, 0, 0, 0.2);
-}
-#Shell
-.tool-panel
-.more-button::before{
+#Shell.state1 .tool-panel .more-button::before{
     content:'\002b';
-    /* content:'\205d'; */
-    /* cursor:pointer; */
+    cursor:pointer;
+    font-size:87%;
 }
-#Shell[data-menuState='state2']
-.tool-panel
-.more-button::before{
-    /* content:'\00d7'; */
+#Shell.state2 .tool-panel .more-button::before{
+    content:'\00d7';
 }
-#Shell
-.tool-panel
-.label{
+#Shell .layer1 .tool-panel .label{
     writing-mode:vertical-lr;
     -ms-writing-mode:vertical-lr;
     text-overflow:ellipsis;
     white-space:nowrap;
     overflow:hidden;
     white-space:nowrap;
+    height:fit-content;
 }
-#Shell
-.layer1
-.view{
-    flex-grow:1;
-}
+
