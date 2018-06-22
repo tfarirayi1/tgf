@@ -7,8 +7,10 @@
     "graphql-request": "^1.6.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
+    "react-presents": "^0.7.10",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "react-slidez": "0.0.20"
   },
   "scripts": {
     "start": "react-scripts start",

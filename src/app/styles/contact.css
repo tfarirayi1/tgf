@@ -1,0 +1,27 @@
+.contact_form_input{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+}
+.contact_form_label{
+    font-size:81%;
+    margin-bottom:0.1rem;
+}
+.contact_form_input{
+    padding:0.1rem;
+}
+.contact_form_input-box{
+    border:none;
+    border-left:0.05rem solid rgba(0,150,136,0.7);
+    padding:0.1rem;
+    margin:0.1rem;
+    font-size:0.5rem;
+    resize:none;
+    width:100%;
+    height:fit-content;
+}
+.contact_form_input-box:focus{
+    outline:0.1rem dashed rgba(33,33,33,0.7);
+    outline-offset:0.03rem;
+    border-left:0.05rem solid rgba(0,150,136,0);
+}

@@ -1,33 +1,19 @@
 import Home from './home';
-import Services from './services';
-import Service from './service';
-import Menu from './menu';
+import Studio from './studio';
+import Contact from './contact';
 export const Routes=[
     {
         endpoint:'/',
-        component:Home
+        component:Home,
+        link_name:'Home'
     }
     ,{
-        endpoint:'/services',
-        component:Services,
+        endpoint:'/studio',
+        component:Studio,
+        link_name:'Studio'
     },{
-        endpoint:'/menu',
-        component:Menu,
-    }
-    ,{
-        endpoint:'/service/:id',
-        component:Service
-    }
-    // ,{
-    //     endpoint:'/stylists',
-    //     title:'stylists',
-    //     exact:false,
-    //     component:Stylists
-    // }
-    // ,{
-    //     endpoint:'/calendar',
-    //     title:'calendar',
-    //     exact:false,
-    //     component:Calendar
-    // },
+        endpoint:'/contact',
+        component:Contact,
+        link_name:'Contact'
+    },
 ];
