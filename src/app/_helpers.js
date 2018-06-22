@@ -1,81 +1,23 @@
 import { Auth } from 'aws-amplify';
 import { GraphQLClient } from 'graphql-request';
-// class Project{
-//     constructor(a){
-//         this.id='001';
-//         this.type=a;
-//     }
-// }
-// class Server{
-//     constructor(a,b,c,d,e){
-//         this.provider=a;
-//         this.type=b;
-//         this.owner=c;
-//         this.id=Date.now();
-//         this.cpu=d;
-//         this.mem=e;
-//     }
-// }
-// class Artefact{
-//     constructor(){
-//         this.name='';
-//         this.type='';
-//     }
-// }
-// class Salon{
-//     constructor(){
-//         this.name;
-//         this.dressers//[dresser]
-//         this.hairdos//[hairdo]
-//         this.appointments//[booking]
-//     }
-// }
-// class Dresser{
-//     constructor(){
-//         this.id;
-//         this.type;
-//         this.bookings;//reference
-//     }
-// }
-// class Hairdo{
-//     constructor(){
-//         this.name;
-//         this.description;
-//         this.duration;
-//         this.dressers;//[dresser]
-//     }
-// }
-// class Booking{
-//     constructor(){
-//         this.number;
-//         this.dresser;//reference
-//         this.hairdo;
-//         this.date;
-//         this.startTime;
-//         this.duration;
-//     }
-// }
 //enter salon
 //view menu, hairdresser calendar or general calendar
 export function f1(a,b,c){
     //property-builder
-    const _context=arguments[0];
-    const propertyName=arguments[1];
-    const defaultValue=arguments[2];
+    const _context=a;
+    const propertyName=b;
+    const defaultValue=c;
     const history=window.history;
         return history.state ? ( history.state[_context] ? history.state[_context][propertyName] || defaultValue : defaultValue ) : defaultValue;
 }
 export function f2(a){
-    const query=arguments[0];
+    const query=a;
     const client=new GraphQLClient('http://localhost:3333/',{mode:'cors'});
     client.request(query).then((response)=>{
         return console.log(response);
     });
 }
-export function f3(){
-    //link-builder
-}
-export function f4(){
+export function configureAuth(){
     //configure-amazon-cognito-details
     Auth.configure({
         identityPoolId:'eu-west-1:25388842-fe3f-47da-b371-8523843a6018',

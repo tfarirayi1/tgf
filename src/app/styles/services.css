@@ -1,11 +1,22 @@
+@font-face{
+    font-family:'Arvo';
+    src:url('arvo-font/Arvo-Regular.ttf');
+    font-display:block;
+}
 #Services{
     text-align:left;
 }
-#Services
+.hairdo-name{
+    font-weight:bold;
+    padding:0.1rem;
+}
+.hairdo-name::before{
+    content:'\2022';
+}
 .hairdo-panel{
-    padding:1%;
-    margin:1ch;
-    border-left:3px solid rgba(255,255,255,0.8);
-    color:rgba(255,255,255,0.8);
-    font-size:47%;
+    padding:0.2rem;
+    margin:0.1rem;
+    font-family:'Arvo';
+    color:rgba(0, 0, 0, 0.6);
+    font-size:57%;
 }

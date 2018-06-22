@@ -4,30 +4,34 @@ export const Hairdos=[
         minDuration:45,
         maxDuration:60,
         type:'styling',
-        priceRange:'',
+        price_range:'25-45',
         description:''
     },{
         name:'ladies-finish',
         minDuration:45,
         maxDuration:60,
+        price_range:'25-45',
         type:'styling',
         description:''
     },{
         name:'half-head-highlights',
         minDuration:45,
         maxDuration:60,
+        price_range:'25-45',
         type:'colours',
         description:''
     },{
         name:'three-quarter-head-highlights',
         minDuration:45,
         maxDuration:60,
+        price_range:'25-45',
         type:'colours',
         description:''
     },{
         name:'ladies-cut-and-finish',
         minDuration:45,
         maxDuration:60,
+        price_range:'25-45',
         type:'styling',
         priceRange:'',
         description:''
@@ -35,18 +39,21 @@ export const Hairdos=[
         name:'ladies-finish',
         minDuration:45,
         maxDuration:60,
+        price_range:'25-45',
         type:'styling',
         description:''
     },{
         name:'half-head-highlights',
         minDuration:45,
         maxDuration:60,
+        price_range:'25-45',
         type:'colours',
         description:''
     },{
         name:'three-quarter-head-highlights',
         minDuration:45,
         maxDuration:60,
+        price_range:'25-45',
         type:'colours',
         description:''
     }
