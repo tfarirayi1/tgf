@@ -13,9 +13,6 @@
     font-family:Oswald;
     color:rgba(0,0,0,0.8);
 }
-svg{
-    display:block;
-}
 html,body{
     margin:auto;
     width:100%;
@@ -36,7 +33,7 @@ div {
 a {
     text-decoration:none;
     color:rgba(0, 0, 0, 0.6);
-    cursor:pointer;
+    cursor:default;
 }
 #Shell{
     position:fixed;
@@ -49,9 +46,10 @@ a {
     justify-content:center;
     align-items:flex-start;
     overflow-y:auto;
+    overflow-x:hidden;
     background-color:rgba(0,150,136,0);
 }
-.layer1{
+.level1{
     display:flex;
     flex-direction:column;
     flex-wrap:nowrap;
@@ -59,58 +57,45 @@ a {
     align-items:center;
     background-color:rgba(0,105,92,0);
     width:100%;
-    max-width:960px;
-    padding:0.3rem;
+    max-width:967px;
+    padding:0.19rem;
 }
-.view{
+.view_panel{
     padding:0.3rem;
     background-color:rgba(173,20,87,0);
-}
-.top-panel{
-    /* position:sticky; */
-    /* top:.1rem; */
     width:100%;
+}
+.top_panel{
+    width:100%;
+    padding-left:0.19rem;
+    padding-right:0.19rem;
     display:flex;
     flex-direction:row;
-    flex-wrap:nowrap;
+    flex-wrap:wrap;
     justify-content:space-between;
+    align-items:center;
     background-color:rgba(38,50,56,0);
-}
-.top-panel a{
-    color:rgba(33,33,33,0.7);
+    line-height:0.77;
 }
 .navigation{
     display:flex;
     flex-direction:row;
     height:fit-content;
-    border-bottom:0.1rem solid rgba(0,150,136,0.7);
+    font-size:87%;
 }
-.social{
+.social_buttons{
     display:flex;
     flex-direction:row;
+    height:fit-content;
     align-items:center;
+    font-size:79%;
 }
 .social_button{
-    padding:0.1rem;
-}
-.nav-link{
     padding:0.2rem;
 }
-.nav-link:hover{
-    text-decoration:overline dotted;
+.social_button:focus{
+    outline:0.07rem solid;
 }
-.home-button{
-    margin:auto;
-    cursor:pointer;
-}
-.back-button{
-    margin:auto;
-    cursor:pointer;
-}
-.label{
-    overflow:hidden;
-    white-space:nowrap;
-    text-overflow:ellipsis;
-    text-align:center;
-    text-shadow: 2px 2px rgba(38,50,56,0.1);
+.navigation_link{
+    padding:0.2rem;
 }

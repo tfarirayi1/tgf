@@ -4,7 +4,7 @@ import React from 'react';
 export default class _404 extends React.Component{
     render(){
         return(
-            <div className="_404">Page not found...</div>
+            <div className="_404">Nothing here...</div>
         );
     }
 }

@@ -5,15 +5,15 @@ export const Routes=[
     {
         endpoint:'/',
         component:Home,
-        link_name:'Home'
+        link_name:'home'
     }
     ,{
         endpoint:'/studio',
         component:Studio,
-        link_name:'Studio'
+        link_name:'studio'
     },{
         endpoint:'/contact',
         component:Contact,
-        link_name:'Contact'
+        link_name:'contact'
     },
 ];
